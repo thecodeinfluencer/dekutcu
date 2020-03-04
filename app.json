@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Tab Navigation Template",
-    "slug": "DekutCU",
+    "name": "DekutCU",
+    "slug": "dekut_cu",
     "privacy": "public",
     "sdkVersion": "36.0.0",
     "platforms": [
@@ -26,6 +26,19 @@
     ],
     "ios": {
       "supportsTablet": true
-    }
+    },
+    "android": {
+      "package": "com.dekutcu"
+    },
+    "androidStatusBar": {
+      "barStyle": "dark-content",
+      "backgroundColor": "#ffffff"
+    },
+    "androidNavigationBar": {
+      "visible": true,
+      "barStyle": "dark-content",
+      "backgroundColor": "#2afd8c"
+    },
+    "description": ""
   }
 }
