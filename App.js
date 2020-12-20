@@ -1,21 +1,59 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { Platform, StatusBar, StyleSheet, View } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
+import { createStore, applyMiddleware } from "redux";
+import { Provider } from "react-redux";
+import thunk from "redux-thunk";
+
+import BottomTabNavigator from "./navigation/BottomTabNavigator";
+import useCachedResources from "./hooks/useCachedResources";
+import rootReducer from "./redux/reducers/rootReducer";
+import { ThemeColors } from "./constants/Colors";
+
+const Stack = createStackNavigator();
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+  const isLoadingComplete = useCachedResources();
+
+  StatusBar.setBackgroundColor(ThemeColors.statusBarColor);
+  StatusBar.setBarStyle(ThemeColors.barStyle);
+
+  const store = createStore(rootReducer, applyMiddleware(thunk));
+
+  if (!isLoadingComplete) {
+    return null;
+  } else {
+    return (
+      <Provider store={store}>
+        <View style={styles.container}>
+          {Platform.OS === "ios" && <StatusBar barStyle="default" />}
+          <NavigationContainer>
+            <Stack.Navigator>
+              <Stack.Screen
+                name="Dedan Christians"
+                component={BottomTabNavigator}
+                options={{
+                  headerStyle: {
+                    backgroundColor: ThemeColors.appBarColor,
+                  },
+                  headerTintColor: "#aaa",
+                  headerTitleStyle: {
+                    fontWeight: "bold",
+                  },
+                }}
+              />
+            </Stack.Navigator>
+          </NavigationContainer>
+        </View>
+      </Provider>
+    );
+  }
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#fff",
   },
 });

@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "dekutcu",
-    "slug": "dekutcu",
-    "version": "1.0.0",
+    "name": "DekutCU",
+    "slug": "DekutCU",
+    "version": "1.2.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
@@ -20,6 +20,8 @@
       "supportsTablet": true
     },
     "android": {
+      "package": "com.codeinfluencer.dekutcu",
+      "versionCode": 2,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
@@ -27,6 +29,7 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "DeKUT Christian Union App"
   }
 }
