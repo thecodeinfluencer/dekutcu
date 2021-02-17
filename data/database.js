@@ -1,16 +1,33 @@
 export const store = {
   coreValues: [
     {
-      iconName: "md-heart",
+      iconName: "md-book",
       header: "Believing In the Bible",
       content:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, quiodit facilis tenetur tempora libero ",
+        "We value the Bible as the Sovereign word of God.Study it together and build our lives on its truth.",
     },
     {
-      iconName: "md-book",
-      header: "Living in his grace",
+      iconName: "md-person",
+      header: "Excellence",
       content:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, quiodit facilis tenetur tempora libero ",
+        "We pursue excellence in all we do because we have the mind and the Spirit of Christ.",
+    },
+    {
+      iconName: "md-heart",
+      header: "God's Love and Grace",
+      content:
+        "We value the free gift of salvation in Christ Jesus and the transformation power of the Holy Spirit.",
+    },
+    {
+      iconName: "md-sword",
+      header: "Honor",
+      content:
+        "We treat each other with respect and integrity. We honor and submit to our leaders as unto the Lord.",
+    },
+    {
+      iconName: "md-people",
+      header: "Witnessing to the nations",
+      content: "We value, love and actively witness for Christ to all people.",
     },
   ],
 
@@ -18,25 +35,48 @@ export const store = {
     {
       day: "Monday",
       meetings: [
-        { name: "Evening Devotion", venue: "Room 8", time: "6am" },
-        { name: "Evening Devotion 1", venue: "Room 8", time: "6am" },
-        { name: "Evening Devotion 2", venue: "Room 8", time: "6am" },
+        { name: "Morning Devotion", venue: "Room 7", time: "5am" },
+        { name: "Evangelism", venue: "Comissioning", time: "5pm" },
       ],
     },
     {
       day: "Tuesday",
       meetings: [
-        { name: "Evening Devotion5", venue: "Room 8", time: "6am" },
-        { name: "Evening Devotion 3", venue: "Room 8", time: "6am" },
-        { name: "Evening Devotion 4", venue: "Room 8", time: "6am" },
+        { name: "Morning Devotion", venue: "Room 7", time: "5am" },
+        { name: "Bible Study", venue: "Room 7", time: "8pm" },
       ],
     },
     {
       day: "Wednesday",
       meetings: [
-        { name: "Evening Devotion6", venue: "Room 8", time: "6am" },
-        { name: "Evening Devotion 7", venue: "Room 8", time: "6am" },
-        { name: "Evening Devotion 8", venue: "Room 8", time: "6am" },
+        { name: "Morning Devotion", venue: "Room 7", time: "5am" },
+        { name: "Intercessory", venue: "Old Mess", time: "5pm" },
+      ],
+    },
+    {
+      day: "Thursday",
+      meetings: [
+        { name: "Morning Devotion", venue: "Room 7", time: "5am" },
+        { name: "Discipleship", venue: "Freedom Hall", time: "8pm" },
+      ],
+    },
+    {
+      day: "Friday",
+      meetings: [
+        { name: "Morning Devotion", venue: "Room 7", time: "5am" },
+        { name: "Friday Service", venue: "Freedom Hall", time: "7pm" },
+      ],
+    },
+    {
+      day: "Saturday",
+      meetings: [{ name: "Morning Devotion", venue: "Room 7", time: "5am" }],
+    },
+    {
+      day: "Sunday",
+      meetings: [
+        { name: "Morning Devotion", venue: "Room 7", time: "5am" },
+        { name: "Sunday Service", venue: "Freedom Hall", time: "10am" },
+        { name: "Empowerment", venue: "Old Mess", time: "5pm" },
       ],
     },
   ],
@@ -46,6 +86,7 @@ export const store = {
       "Dedan Kimathi University Of Technology Christian Union (DekutCU)\nThe Church of Kimathi",
     desc:
       "We are a church rooted in God’s word. over the years we have experienced tremendous growth. from a gathering of about 20 members to 500 members and still going Deep and Wide. From Old Mess to Catholic Hall to freedom hall. ",
+    url: "",
   },
 
   missionVision: [
@@ -56,7 +97,8 @@ export const store = {
     },
     {
       title: "Mission",
-      content: "",
+      content:
+        "To fashion a people after God’s heart who will readily reach out to make disciples, train and people them in the unity of the faith to form a transformative generation.",
     },
   ],
 
@@ -119,6 +161,7 @@ export const store = {
     {
       name: "Ushering",
       link: "Ushering Ministry",
+      url: "https://www.dekutcu.co.ke/ushering/",
       leader: "Naman Murithi",
       subMinistries: [],
       desc:
@@ -128,44 +171,8 @@ export const store = {
 
   notifications: [
     {
-      date: "5 OCT 2020 at 2:33PM",
-      text:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. ea quo, assumenda repellendus enim ut eligendi maiores. Ducimus, abexpedita",
-      title: "Lorem ipsum dolor sit amet",
-    },
-    {
-      date: "5 OCT 2020 at 2:33PM",
-      text:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. ea quo, assumenda repellendus enim ut eligendi maiores. Ducimus, abexpedita",
-      title: "Lorem ipsum dolor sit amet",
-    },
-  ],
-
-  notifications: [
-    {
       date: 232425354353,
-      text:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. ea quo, assumenda repellendus enim ut eligendi maiores. Ducimus, abexpeditaLorem ipsum dolor sit amet, consectetur adipisicing elit. ea quo, assumenda repellendus enim ut eligendi maiores. Ducimus, abexpeditaLorem ipsum dolor sit amet, consectetur adipisicing elit. ea quo, assumenda repellendus enim ut eligendi maiores. Ducimus, abexpeditaLorem ipsum dolor sit amet, consectetur adipisicing elit. ea quo, assumenda repellendus enim ut eligendi maiores. Ducimus, abexpeditaLorem ipsum dolor sit amet, consectetur adipisicing elit. ea quo, assumenda repellendus enim ut eligendi maiores. Ducimus, abexpeditaLorem ipsum dolor sit amet, consectetur adipisicing elit. ea quo, assumenda repellendus enim ut eligendi maiores. Ducimus, abexpeditaLorem ipsum dolor sit amet, consectetur adipisicing elit. ea quo, assumenda repellendus enim ut eligendi maiores. Ducimus, abexpeditaLorem ipsum dolor sit amet, consectetur adipisicing elit. ea quo, assumenda repellendus enim ut eligendi maiores. Ducimus, abexpeditaLorem ipsum dolor sit amet, consectetur adipisicing elit. ea quo, assumenda repellendus enim ut eligendi maiores. Ducimus, abexpedita",
-    },
-    {
-      date: 232425354353,
-      text:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. ea quo, assumenda repellendus enim ut eligendi maiores. Ducimus, abexpeditaLorem ipsum dolor sit amet, consectetur adipisicing elit. ea quo, assumenda repellendus enim ut eligendi maiores. Ducimus, abexpeditaLorem ipsum dolor sit amet, consectetur adipisicing elit. ea quo, assumenda repellendus enim ut eligendi maiores. Ducimus, abexpeditaLorem ipsum dolor sit amet, consectetur adipisicing elit. ea quo, assumenda repellendus enim ut eligendi maiores. Ducimus, abexpeditaLorem ipsum dolor sit amet, consectetur adipisicing elit. ea quo, assumenda repellendus enim ut eligendi maiores. Ducimus, abexpeditaLorem ipsum dolor sit amet, consectetur adipisicing elit. ea quo, assumenda repellendus enim ut eligendi maiores. Ducimus, abexpeditaLorem ipsum dolor sit amet, consectetur adipisicing elit. ea quo, assumenda repellendus enim ut eligendi maiores. Ducimus, abexpeditaLorem ipsum dolor sit amet, consectetur adipisicing elit. ea quo, assumenda repellendus enim ut eligendi maiores. Ducimus, abexpeditaLorem ipsum dolor sit amet, consectetur adipisicing elit. ea quo, assumenda repellendus enim ut eligendi maiores. Ducimus, abexpedita",
-    },
-    {
-      date: 232425354353,
-      text:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. ea quo, assumenda repellendus enim ut eligendi maiores. Ducimus, abexpeditaLorem ipsum dolor sit amet, consectetur adipisicing elit. ea quo, assumenda repellendus enim ut eligendi maiores. Ducimus, abexpeditaLorem ipsum dolor sit amet, consectetur adipisicing elit. ea quo, assumenda repellendus enim ut eligendi maiores. Ducimus, abexpeditaLorem ipsum dolor sit amet, consectetur adipisicing elit. ea quo, assumenda repellendus enim ut eligendi maiores. Ducimus, abexpeditaLorem ipsum dolor sit amet, consectetur adipisicing elit. ea quo, assumenda repellendus enim ut eligendi maiores. Ducimus, abexpeditaLorem ipsum dolor sit amet, consectetur adipisicing elit. ea quo, assumenda repellendus enim ut eligendi maiores. Ducimus, abexpeditaLorem ipsum dolor sit amet, consectetur adipisicing elit. ea quo, assumenda repellendus enim ut eligendi maiores. Ducimus, abexpeditaLorem ipsum dolor sit amet, consectetur adipisicing elit. ea quo, assumenda repellendus enim ut eligendi maiores. Ducimus, abexpeditaLorem ipsum dolor sit amet, consectetur adipisicing elit. ea quo, assumenda repellendus enim ut eligendi maiores. Ducimus, abexpedita",
-    },
-    {
-      date: 232425354353,
-      text:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. ea quo, assumenda repellendus enim ut eligendi maiores. Ducimus, abexpeditaLorem ipsum dolor sit amet, consectetur adipisicing elit. ea quo, assumenda repellendus enim ut eligendi maiores. Ducimus, abexpeditaLorem ipsum dolor sit amet, consectetur adipisicing elit. ea quo, assumenda repellendus enim ut eligendi maiores. Ducimus, abexpeditaLorem ipsum dolor sit amet, consectetur adipisicing elit. ea quo, assumenda repellendus enim ut eligendi maiores. Ducimus, abexpeditaLorem ipsum dolor sit amet, consectetur adipisicing elit. ea quo, assumenda repellendus enim ut eligendi maiores. Ducimus, abexpeditaLorem ipsum dolor sit amet, consectetur adipisicing elit. ea quo, assumenda repellendus enim ut eligendi maiores. Ducimus, abexpeditaLorem ipsum dolor sit amet, consectetur adipisicing elit. ea quo, assumenda repellendus enim ut eligendi maiores. Ducimus, abexpeditaLorem ipsum dolor sit amet, consectetur adipisicing elit. ea quo, assumenda repellendus enim ut eligendi maiores. Ducimus, abexpeditaLorem ipsum dolor sit amet, consectetur adipisicing elit. ea quo, assumenda repellendus enim ut eligendi maiores. Ducimus, abexpedita",
-    },
-    {
-      date: 232425354353,
-      text:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. ea quo, assumenda repellendus enim ut eligendi maiores. Ducimus, abexpeditaLorem ipsum dolor sit amet, consectetur adipisicing elit. ea quo, assumenda repellendus enim ut eligendi maiores. Ducimus, abexpeditaLorem ipsum dolor sit amet, consectetur adipisicing elit. ea quo, assumenda repellendus enim ut eligendi maiores. Ducimus, abexpeditaLorem ipsum dolor sit amet, consectetur adipisicing elit. ea quo, assumenda repellendus enim ut eligendi maiores. Ducimus, abexpeditaLorem ipsum dolor sit amet, consectetur adipisicing elit. ea quo, assumenda repellendus enim ut eligendi maiores. Ducimus, abexpeditaLorem ipsum dolor sit amet, consectetur adipisicing elit. ea quo, assumenda repellendus enim ut eligendi maiores. Ducimus, abexpeditaLorem ipsum dolor sit amet, consectetur adipisicing elit. ea quo, assumenda repellendus enim ut eligendi maiores. Ducimus, abexpeditaLorem ipsum dolor sit amet, consectetur adipisicing elit. ea quo, assumenda repellendus enim ut eligendi maiores. Ducimus, abexpeditaLorem ipsum dolor sit amet, consectetur adipisicing elit. ea quo, assumenda repellendus enim ut eligendi maiores. Ducimus, abexpedita",
+      text: "Welcome to DekutCU. Notifications will appear here",
     },
   ],
 };

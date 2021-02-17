@@ -1,30 +1,20 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add expo-firestore-offline-persistance
+  C:\Program Files\nodejs\node.exe C:\Users\codeinfluencer\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add react-native-track-player
 
 PATH: 
-  C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Python27\;C:\Python27\Scripts;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\Program Files\Java\jdk1.8.0_211\bin;C:\Gradle\gradle-5.6.2\bin;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\MongoDB\Server\4.2\bin;C:\Program Files\jacc;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Users\codeinfluencer\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Java\jdk1.8.0_211\bin;C:\Users\codeinfluencer\AppData\Local\Android\Sdk\platform-tools;C:\Program Files\Visual Studio Code\bin;C:\Users\codeinfluencer\AppData\Local\Yarn\bin;C:\Users\codeinfluencer\AppData\Roaming\npm;C:\Users\codeinfluencer\AppData\Local\Programs\MiKTeX\miktex\bin\x64\
+  C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\MiKTeX\miktex\bin\x64\;C:\Program Files\Git\cmd;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs\;C:\Program Files\OpenJDK\openjdk-8u275-b01\bin;C:\Gradle\gradle-6.8\bin;C:\Users\codeinfluencer\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\codeinfluencer\AppData\Local\Programs\Python\Python39\;C:\Users\codeinfluencer\AppData\Local\Microsoft\WindowsApps;C:\Users\codeinfluencer\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\codeinfluencer\AppData\Roaming\npm;C:\Users\codeinfluencer\AppData\Local\Android\Sdk\platform-tools;C:\Program Files\Java\jdk1.8.0_271;C:\Program Files\Java\jre1.8.0_271;C:\Gradle\gradle-6.8\bin;
 
 Yarn version: 
-  1.19.1
+  1.22.10
 
 Node version: 
-  14.15.0
+  15.5.1
 
 Platform: 
   win32 x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/expo-firestore-offline-persistance: Not found
-      at Request.params.callback [as _callback] (C:\Program Files (x86)\Yarn\lib\cli.js:66035:18)
-      at Request.self.callback (C:\Program Files (x86)\Yarn\lib\cli.js:140564:22)
-      at Request.emit (events.js:315:20)
-      at Request.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:141536:10)
-      at Request.emit (events.js:315:20)
-      at IncomingMessage.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:141458:12)
-      at Object.onceWrapper (events.js:421:28)
-      at IncomingMessage.emit (events.js:327:22)
-      at endReadableNT (_stream_readable.js:1327:12)
-      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+  Error: EPERM: operation not permitted, unlink 'D:\Development\React Native Projects\Expo\dekutcu\node_modules\@babel\generator\node_modules\.bin'
 
 npm manifest: 
   {
@@ -45,10 +35,14 @@ npm manifest:
       "expo": "~40.0.0",
       "expo-asset": "~8.2.1",
       "expo-constants": "~9.3.3",
+      "expo-firestore-offline-persistence": "^0.1.0",
       "expo-font": "~8.4.0",
       "expo-splash-screen": "~0.8.1",
       "expo-status-bar": "~1.0.3",
       "expo-web-browser": "~8.6.0",
+      "firebase": "7.9.0",
+      "indexeddbshim": "7.0.0",
+  "luxon": "^1.25.0",
       "react": "16.13.1",
       "react-dom": "16.13.1",
       "react-native": "https://github.com/expo/react-native/archive/sdk-40.0.1.tar.gz",
@@ -2613,6 +2607,11 @@ Lockfile:
     integrity sha512-x83IVep6PVfzGLpzR5fhWgKGlDaF95vfRzvmLyOMnbSuM8gY9a8C92taxZxfitryy9+D46lbRcnxPvBqFkXMNg==
     dependencies:
       uuid "^3.4.0"
+  
+  expo-firestore-offline-persistence@^0.1.0:
+    version "0.1.0"
+    resolved "https://registry.yarnpkg.com/expo-firestore-offline-persistence/-/expo-firestore-offline-persistence-0.1.0.tgz#d65be5471fd82ee1d2061a98245790e3570a14a4"
+    integrity sha512-Q2BtpfRblOERwvMxGnSVvLzYlp5oo/UxcGzEXDnvZFE2Pnu76gosP51AJp/4P2KdKnB7vJvUEkEY1zxf21wPeg==
   
   expo-font@~8.4.0:
     version "8.4.0"

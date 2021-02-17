@@ -1,17 +1,17 @@
 import firebase from "../../data/firebaseConfig";
 
-export const fetchDevotionals = () => {
+export const fetchCoreValues = () => {
   return (dispatch, getState) => {
     firebase
       .firestore()
-      .collection("devotionals")
+      .collection("missionvision")
       .onSnapshot(function (snap) {
-        const devotionals = [];
+        const missionvision = [];
         snap.forEach((doc) => {
-          devotionals.push(doc.data());
+          missionvision.push(doc.data());
         });
 
-        dispatch({ type: "FETCH_DEVOTIONALS", devotionals });
+        dispatch({ type: "FETCH_CORE_VALUES", missionvision });
       });
   };
 };

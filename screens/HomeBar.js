@@ -19,7 +19,7 @@ export default function HomeBar({ navigation }) {
     dispatch(fetchNotifications());
   }, []);
 
-  const store = useSelector(state => state);
+  const store = useSelector((state) => state);
   const { about, missionVision } = store;
 
   return (
@@ -59,7 +59,7 @@ export default function HomeBar({ navigation }) {
           </MonoText>
         </View>
 
-        {missionVision.map(item => (
+        {missionVision.map((item) => (
           <TitleCard
             key={item.title}
             title={item.title}
@@ -70,13 +70,18 @@ export default function HomeBar({ navigation }) {
         <View style={{ paddingVertical: 24 }}>
           <LinkSection
             navigation={navigation}
-            title="Core Values"
-            component="CoreValues"
+            title="Audio Sermons"
+            component="Sermons"
           />
           <LinkSection
             navigation={navigation}
             title="Weekly Fellowships"
             component="Fellowships"
+          />
+          <LinkSection
+            navigation={navigation}
+            title="Core Values"
+            component="CoreValues"
           />
           <LinkSection
             title="Events"

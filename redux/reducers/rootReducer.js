@@ -7,6 +7,7 @@ import weeklyFellowReducer from "./weeklyFellowReducer";
 import ministryArrayReducer from "./ministryArrayReducer";
 import notificationsReducer from "./notificationsReducer";
 import devotionalsReducer from "./devotionalsReducer";
+import sermonsReducer from "./sermonsReducer";
 
 const rootReducer = combineReducers({
   coreValues: coreValuesReducer,
@@ -16,6 +17,7 @@ const rootReducer = combineReducers({
   ministryArray: ministryArrayReducer,
   notifications: notificationsReducer,
   devotionals: devotionalsReducer,
+  sermons: sermonsReducer,
 });
 
 export default rootReducer;
