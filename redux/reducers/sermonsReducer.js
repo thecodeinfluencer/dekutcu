@@ -6,14 +6,14 @@ const initialState = {
       title: "The Grace",
       time: 1612435581852,
       url:
-        "https://firebasestorage.googleapis.com/v0/b/dekutchristians.appspot.com/o/mbosso_picha_yake_official_music_video_mp3_37542.mp3?alt=media&token=a1db9b3d-2773-4c92-8cfd-f74e087fff75",
+        "https://firebasestorage.googleapis.com/v0/b/dekutchristians.appspot.com/o/Sam%20Oladotun%20-%20You%20Are%20Yahweh%20(Worship%20Medley)(MP3_70K)_1.mp3?alt=media&token=b37d31d5-fa3b-4402-8919-13b81d42541d",
     },
     {
       author: "Dad Wesley",
       title: "Mounting Up",
       time: 1612435581852,
       url:
-        "https://firebasestorage.googleapis.com/v0/b/dekutchristians.appspot.com/o/mbosso_picha_yake_official_music_video_mp3_37542.mp3?alt=media&token=a1db9b3d-2773-4c92-8cfd-f74e087fff75",
+        "https://firebasestorage.googleapis.com/v0/b/dekutchristians.appspot.com/o/Sam%20Oladotun%20-%20You%20Are%20Yahweh%20(Worship%20Medley)(MP3_70K)_1.mp3?alt=media&token=b37d31d5-fa3b-4402-8919-13b81d42541d",
     },
   ],
 };

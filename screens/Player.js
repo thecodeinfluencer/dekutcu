@@ -1,15 +1,65 @@
 import React, { useState } from "react";
 import { View, Slider } from "react-native";
 import { DateTime } from "luxon";
+import { Audio } from "expo-av";
+import { Duration } from "luxon";
+import { useNavigation } from "@react-navigation/native";
 
 import { MonoText } from "../components/StyledText";
 import { ThemeColors } from "../constants/Colors";
 import Layout from "../constants/Layout";
 import IconButton from "../components/IconButton";
+import { useEffect } from "react";
 
 export default function Player({ route }) {
   const { author, time, title, url } = route.params.content;
-  const [playBtn, setPlayBtn] = useState(false);
+  const [sound, setSound] = useState(null);
+  const [musicState, setMusicState] = useState({});
+
+  async function unloadSound() {
+    sound
+      ? () => {
+          console.log("Unloading Sound");
+          sound.unloadAsync();
+        }
+      : console.log("No Sound to Unload");
+  }
+
+  async function loadSound() {
+    unloadSound();
+    console.log("Loading Sound");
+    const { sound } = await Audio.Sound.createAsync(
+      //  require('./assets/Hello.mp3')
+      {
+        uri:
+          "https://firebasestorage.googleapis.com/v0/b/dekutchristians.appspot.com/o/Sam%20Oladotun%20-%20You%20Are%20Yahweh%20(Worship%20Medley)(MP3_70K)_1.mp3?alt=media&token=b37d31d5-fa3b-4402-8919-13b81d42541d",
+      },
+      null,
+      (state) => {
+        setMusicState(state);
+      },
+      false
+    );
+    setSound(sound);
+
+    await sound.playAsync();
+    console.log("Sound Loaded");
+  }
+
+  async function playSound() {
+    if (musicState.isLoaded) {
+      console.log("Resuming Sound");
+      await sound.playAsync();
+    } else {
+      console.log("Sound Not loaded yet", musicState.isLoaded);
+      loadSound();
+    }
+  }
+
+  async function pauseSound() {
+    console.log("Pausing Sound");
+    await sound.pauseAsync();
+  }
 
   return (
     <View>
@@ -49,6 +99,17 @@ export default function Player({ route }) {
         </MonoText>
       </View>
       <Slider
+        value={musicState.positionMillis / musicState.durationMillis || 0}
+        onValueChange={(val) => {
+          musicState.durationMillis && sound.pauseAsync();
+        }}
+        onSlidingComplete={(val) => {
+          musicState.durationMillis &&
+            sound.setStatusAsync({
+              positionMillis: Math.floor(val * musicState.durationMillis),
+            });
+          sound.playAsync();
+        }}
         minimumTrackTintColor={ThemeColors.themeColor}
         thumbTintColor={ThemeColors.themeColor}
         style={{
@@ -74,19 +135,33 @@ export default function Player({ route }) {
             justifyContent: "space-between",
           }}
         >
-          <MonoText
-            style={{
-              color: ThemeColors.themeColor,
-              fontSize: 18,
-            }}
-          >{`${author} . ${title}`}</MonoText>
+          <View>
+            <MonoText
+              style={{
+                color: ThemeColors.themeColor,
+                fontSize: 18,
+              }}
+            >
+              {musicState.durationMillis &&
+                Duration.fromObject({
+                  milliseconds: musicState.positionMillis,
+                }).toFormat("hh:mm:ss")}
+            </MonoText>
+
+            <MonoText
+              style={{
+                color: ThemeColors.themeColor,
+                fontSize: 18,
+              }}
+            >{`${author} . ${title}`}</MonoText>
+          </View>
           <IconButton
             rounded
-            name={playBtn ? "pause" : "play"}
+            name={musicState.isPlaying ? "pause" : "play"}
             size={30}
             bg={ThemeColors.themeColor}
             color={ThemeColors.white}
-            onPress={() => setPlayBtn(!playBtn)}
+            onPress={musicState.isPlaying ? pauseSound : playSound}
           />
         </View>
       </View>
