@@ -7,10 +7,16 @@ import { MonoText } from "./StyledText";
 
 export default function TabBarIcon({ focused, name, label }) {
   return (
-    <View style={{ justifyContent: "center", alignItems: "center" }}>
+    <View
+      style={{
+        justifyContent: "center",
+        alignItems: "center",
+        marginVertical: 10,
+      }}
+    >
       <Ionicons
         name={name}
-        size={focused ? 20 : 25}
+        size={focused ? 24 : 20}
         style={{ marginBottom: 0, marginTop: 3 }}
         color={
           focused ? ThemeColors.tabIconSelected : ThemeColors.tabIconDefault

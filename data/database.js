@@ -86,7 +86,7 @@ export const store = {
       "Dedan Kimathi University Of Technology Christian Union (DekutCU)\nThe Church of Kimathi",
     desc:
       "We are a church rooted in God’s word. over the years we have experienced tremendous growth. from a gathering of about 20 members to 500 members and still going Deep and Wide. From Old Mess to Catholic Hall to freedom hall. ",
-    url: "",
+    url: "https://www.dekutcu.co.ke",
   },
 
   missionVision: [
@@ -107,6 +107,8 @@ export const store = {
       name: "Music",
       link: "Music Ministry",
       url: "https://www.dekutcu.co.ke/music-ministry/",
+      photoURL:
+        "https://firebasestorage.googleapis.com/v0/b/dekutchristians.appspot.com/o/ministries%2Fmusic.JPG?alt=media&token=b6130850-6aa0-4f26-bdb1-1165d80bc8a7",
       leader: "Gitari Lovy Mukami",
       subMinistries: [
         {
@@ -137,22 +139,29 @@ export const store = {
       name: "Publicity",
       link: "Publicity Ministry",
       url: "https://www.dekutcu.co.ke/publicity/",
-      leader: "Mathu Wesley",
+      photoURL:
+        "https://firebasestorage.googleapis.com/v0/b/dekutchristians.appspot.com/o/ministries%2Fpublicity.JPG?alt=media&token=e4141823-7c79-4497-96a5-d4e1da6ee81f",
+      leader: "Stephen Maina",
       subMinistries: [
         {
           name: "Library",
           desc:
-            "Nunc et augue pulvinar, luctus mi non, sagittis odio. Phasellus congue sem nulla.non orci malesu da vel. Aliquam posuere mi eros.",
+            "We have a great catalogue of books both in soft and hard copy. Feel free to reach out and borrow these at any time.",
         },
         {
           name: "Media",
           desc:
-            "Nunc et augue pulvinar, luctus mi non, sagittis odio. Phasellus congue sem nulla.non orci malesu da vel. Aliquam posuere mi eros.",
+            "The media team of the publicity ensures that sermons are recorded and uploaded to social media like YouTube. They are also responsible for livestreaming and making video promotions.",
+        },
+        {
+          name: "IT",
+          desc:
+            "From projecting to making of posters and much more, the IT department plays a very crucial role in publicity docket.",
         },
         {
           name: "Marketing",
           desc:
-            "Nunc et augue pulvinar, luctus mi non, sagittis odio. Phasellus congue sem nulla.non orci malesu da vel. Aliquam posuere mi eros.",
+            "The marketing desk sells comodities that ensure youre well suited for sermons including but not limited to books, bibles and pens.",
         },
       ],
       desc:
@@ -162,7 +171,9 @@ export const store = {
       name: "Ushering",
       link: "Ushering Ministry",
       url: "https://www.dekutcu.co.ke/ushering/",
-      leader: "Naman Murithi",
+      photoURL:
+        "https://firebasestorage.googleapis.com/v0/b/dekutchristians.appspot.com/o/ministries%2Fushering.JPG?alt=media&token=f4df900b-0baa-4e39-b629-c52382dc65a4",
+      leader: "Molyne Wanjiru",
       subMinistries: [],
       desc:
         "Any act of Christian service helping direct people into fellowship with Jesus Christ is a ministry, ushering is indeed a ministry in DeKUT Christian Union based upon the Scriptural theme:…Colossians 3:23-24 “And whatsoever ye do, do it heartily, as to the Lord, and not unto men; 24 Knowing that of the Lord ye shall receive the reward of the inheritance: for ye serve the Lord Christ. (KJV).\nUshering ministry is a service department in the Christian Union whose primary responsibility is in ensuring everything is done decently and in an orderly way to enhance a conducive place of worship hence an awesome worship experience by every worshiper in the Church.\nIn pursuit to fulfilling the ministry as being part of the ushering department of DeKUT Christian Union, I’ve all along endeavored to ensure a simple understanding of who an usher is and why you should actually become one has fully been grasped by the existing and new members of the ushering Ministry.\nUshering ministry has a special role similar to the air-conditioning in a hall. When it is working, people hardly notice but when it stops working, everyone notices. As ushers in the congregation, the work done therein may not be regularly recognized but its absence will be immediately felt. Overall, we make sure we help everyone give excellent service to our God who more that all deserves our best.\nUshering as a ministry is one and equally the same with the responsibility; which first begins from an individual before it’s extended to others in the Church set up. As you all know, whenever a responsibility arises, expectations cannot be denied thereon.\nExpectations from Ushers\nSpiritual Responsibility: All members in the ushering ministry are expected to maintain a high level of spirituality at all times to enable them effectively serve the people of God simply because, service to the Lord must proceed from the position of son ship. Therefore, it has been and is still my strong desire that everyone spend quality time praying and studying the Word of God…Acts 6:4 “But we will give ourselves continually to prayer and to the ministry of the Word” to enhance the steady growth as prayerful students of the Living Word of God as this is the food by which we grow.\nMost importantly, it is an all-time expectation that each one of the ushers be full of the Holy Spirit such that it shows in the level of excellence of their work…Daniel 6:3 “ Then this Daniel was preferred above the presidents and princes because, an excellent Spirit was in him.\nFinally the questions to always ask so you can rightly define who an usher is;\nWho is an usher?\nWhy be an usher?\n“An usher is one whom spots a gap and fills it, one who finds a desperation and heals it by giving hope; an usher is one who has a loving heart one that is ready to serve with willing hands and ready feet”",
@@ -171,8 +182,29 @@ export const store = {
 
   notifications: [
     {
-      date: 232425354353,
-      text: "Welcome to DekutCU. Notifications will appear here",
+      title: "Welcome to DekutCU App",
+      photoURL:
+        "https://i.swncdn.com/media/800w/via/5515-congregation-hands-up-in-worship-gettyimages-.webp",
+      date: 1619855871993,
+      text:
+        "Welcome Beloved to a church rooted in God's word. Future Notifications will appear here",
+    },
+  ],
+
+  devotionals: [
+    {
+      date: 1619855871993,
+      text: "Welcome to DekutCU App.\nDevotionals will appear here!",
+    },
+  ],
+
+  sermons: [
+    {
+      author: "Pastor Were",
+      title: "Fellowship",
+      time: 1612435581852,
+      url:
+        "https://firebasestorage.googleapis.com/v0/b/dekutchristians.appspot.com/o/sermons%2FWhatsApp%20Audio%202021-05-01%20at%2020.44.22.mpeg?alt=media&token=65fed98d-0f72-440d-9820-8e55206fa6d7",
     },
   ],
 };

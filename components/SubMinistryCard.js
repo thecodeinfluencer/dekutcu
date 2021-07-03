@@ -7,7 +7,7 @@ import Layout from "../constants/Layout";
 import LocalButton from "./LocalButton";
 import { MonoText } from "./StyledText";
 
-export default function SubMinistryCard({ item }) {
+export default function SubMinistryCard({ item, url }) {
   return (
     <View
       style={{
@@ -40,7 +40,7 @@ export default function SubMinistryCard({ item }) {
       </MonoText>
       <LocalButton
         title="Read More"
-        onPress={() => WebBrowser.openBrowserAsync(ministry.url)}
+        onPress={() => WebBrowser.openBrowserAsync(url)}
         bg={ThemeColors.blackWhiteTextAlt}
         color={ThemeColors.blackWhiteAlt}
       />

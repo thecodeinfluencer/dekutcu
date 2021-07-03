@@ -1,16 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { ScrollView } from "react-native";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 import NotificationCard from "../components/NotificationCard";
 import { ThemeColors } from "../constants/Colors";
+import { fetchNotifications } from "../redux/actions/notificationsActions";
 
 export default function Notifications({ navigation }) {
-  const store = useSelector(state => state);
-  console.warn("Notifications: ", store.notifications);
+  const store = useSelector((state) => state);
+  const dispatch = useDispatch();
   navigation.setOptions({
     headerTitle: "Notifications",
   });
+
+  useEffect(() => {
+    dispatch(fetchNotifications());
+  }, []);
 
   return (
     <ScrollView
@@ -20,7 +25,7 @@ export default function Notifications({ navigation }) {
       }}
       contentContainerStyle={{ paddingVertical: 8 }}
     >
-      {store.notifications.list.map(item => (
+      {store.notifications.list.map((item) => (
         <NotificationCard
           key={item.date}
           content={item.text}

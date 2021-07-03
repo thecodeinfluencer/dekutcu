@@ -11,13 +11,15 @@ import LocalButton from "../../components/LocalButton";
 import bg from "../../assets/images/bg.jpg";
 
 export default function Ushering({ route }) {
-  const store = useSelector(state => state);
+  const store = useSelector((state) => state);
 
   let ministry = store.ministryArray.filter(
-    ministry => ministry.name === "Ushering"
+    (ministry) => ministry.name === "Ushering"
   )[0];
   let description = ministry.desc;
   let leader = ministry.leader;
+  let photoURL = ministry.photoURL;
+
   return (
     <View
       style={{
@@ -27,9 +29,12 @@ export default function Ushering({ route }) {
     >
       <ScrollView style={{ flex: 1 }}>
         <Image
-          source={bg}
+          source={{
+            uri: photoURL,
+          }}
           style={{
             width: "100%",
+            height: 200,
           }}
         />
         <View

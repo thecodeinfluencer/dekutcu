@@ -1,5 +1,5 @@
 import { store } from "../../data/database";
-const initialState = { list: store.notifications };
+const initialState = { list: store.devotionals };
 
 export default function devotionalsReducer(state = initialState, action) {
   switch (action.type) {

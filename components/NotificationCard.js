@@ -6,8 +6,6 @@ import { MonoText } from "./StyledText";
 import Layout from "../constants/Layout";
 import { DateTime } from "luxon";
 
-import bg from "../assets/images/bg.jpg";
-
 export default function NotificationCard({ content, date, title, photoURL }) {
   return (
     <View
@@ -42,14 +40,17 @@ export default function NotificationCard({ content, date, title, photoURL }) {
       >
         {DateTime.fromMillis(date).toRelative().toString()}
       </MonoText>
-      <Image
-        source={{
-          url: photoURL,
-        }}
-        style={{
-          width: "100%",
-        }}
-      />
+      {photoURL && (
+        <Image
+          source={{
+            uri: photoURL,
+          }}
+          style={{
+            width: "100%",
+            height: 150,
+          }}
+        />
+      )}
       <MonoText
         style={{
           color: ThemeColors.white,

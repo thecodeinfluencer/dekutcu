@@ -13,14 +13,15 @@ import SubMinistryCard from "../../components/SubMinistryCard";
 import bg from "../../assets/images/bg.jpg";
 
 export default function Music({ route }) {
-  const store = useSelector(state => state);
+  const store = useSelector((state) => state);
 
   let ministry = store.ministryArray.filter(
-    ministry => ministry.name === "Music"
+    (ministry) => ministry.name === "Music"
   )[0];
   let description = ministry.desc;
   let leader = ministry.leader;
   let subMinistries = ministry.subMinistries;
+  let photoURL = ministry.photoURL;
 
   return (
     <View
@@ -31,9 +32,12 @@ export default function Music({ route }) {
     >
       <ScrollView style={{ flex: 1 }}>
         <Image
-          source={bg}
+          source={{
+            uri: photoURL,
+          }}
           style={{
             width: "100%",
+            height: 200,
           }}
         />
         <View
@@ -69,8 +73,8 @@ export default function Music({ route }) {
           />
         </View>
         <HeaderTitle title="Sub Ministries" />
-        {subMinistries.map(item => (
-          <SubMinistryCard item={item} />
+        {subMinistries.map((item) => (
+          <SubMinistryCard item={item} url={ministry.url} />
         ))}
       </ScrollView>
     </View>

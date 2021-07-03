@@ -9,7 +9,7 @@ import Layout from "../constants/Layout";
 const contactList = [
   { icon: "email", text: "info@dekutcu.co.ke" },
   { icon: "email", text: "dedanchristians@gmail.com" },
-  { icon: "phone", text: "+254 757 405 753" },
+  // { icon: "phone", text: "+254 757 405 753" },
   { icon: "facebook", text: "dedanChristians" },
   { icon: "twitter", text: "dedanChristians" },
   { icon: "youtube", text: "dedanChristians" },

@@ -16,12 +16,12 @@ import firebase from "../data/firebaseConfig";
 export default function HomeBar({ navigation }) {
   const dispatch = useDispatch();
 
-  const messaging = firebase.messaging();
-  // Add the public key generated from the console here.
-  messaging.getToken({
-    vapidKey:
-      "BA6re_xmCAs_8eyHsR11k0UVmIbB18wYFW6dTe0yLh9Bsk9uiqmmTzt2Df2za7hU2fIwXReDt0d-Qy5h6Z3qkjs",
-  });
+  // const messaging = firebase.messaging();
+  // // Add the public key generated from the console here.
+  // messaging.getToken({
+  //   vapidKey:
+  //     "BA6re_xmCAs_8eyHsR11k0UVmIbB18wYFW6dTe0yLh9Bsk9uiqmmTzt2Df2za7hU2fIwXReDt0d-Qy5h6Z3qkjs",
+  // });
 
   useEffect(() => {
     dispatch(fetchDevotionals());

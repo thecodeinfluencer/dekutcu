@@ -33,7 +33,10 @@ export default function BottomTabNavigator({ navigation, route }) {
         showLabel: false,
         activeBackgroundColor: ThemeColors.blackWhiteBgAlt,
         inactiveBackgroundColor: ThemeColors.blackWhiteBgAlt,
-        style: { borderTopColor: ThemeColors.blackWhiteBgAlt },
+        style: {
+          borderTopColor: ThemeColors.blackWhiteBgAlt,
+          // paddingVertical: 10,
+        },
       }}
     >
       <BottomTab.Screen

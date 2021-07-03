@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { View, Slider } from "react-native";
 import { DateTime } from "luxon";
 import { Audio } from "expo-av";
@@ -9,9 +9,9 @@ import { MonoText } from "../components/StyledText";
 import { ThemeColors } from "../constants/Colors";
 import Layout from "../constants/Layout";
 import IconButton from "../components/IconButton";
-import { useEffect } from "react";
 
 export default function Player({ route }) {
+  const navigation = useNavigation();
   const { author, time, title, url } = route.params.content;
   const [sound, setSound] = useState(null);
   const [musicState, setMusicState] = useState({});
@@ -29,10 +29,8 @@ export default function Player({ route }) {
     unloadSound();
     console.log("Loading Sound");
     const { sound } = await Audio.Sound.createAsync(
-      //  require('./assets/Hello.mp3')
       {
-        uri:
-          "https://firebasestorage.googleapis.com/v0/b/dekutchristians.appspot.com/o/Sam%20Oladotun%20-%20You%20Are%20Yahweh%20(Worship%20Medley)(MP3_70K)_1.mp3?alt=media&token=b37d31d5-fa3b-4402-8919-13b81d42541d",
+        uri: url,
       },
       null,
       (state) => {
@@ -60,6 +58,11 @@ export default function Player({ route }) {
     console.log("Pausing Sound");
     await sound.pauseAsync();
   }
+
+  navigation.addListener("beforeRemove", () => {
+    pauseSound();
+    return;
+  });
 
   return (
     <View>

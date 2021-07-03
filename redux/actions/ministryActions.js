@@ -1,6 +1,6 @@
 import firebase from "../../data/firebaseConfig";
 
-export const fetchCoreValues = () => {
+export const fetchMusicMinistry = () => {
   return (dispatch, getState) => {
     firebase
       .firestore()
@@ -11,7 +11,7 @@ export const fetchCoreValues = () => {
           ministries.push(doc.data());
         });
 
-        dispatch({ type: "FETCH_CORE_VALUES", ministries });
+        dispatch({ type: "FETCH_MUSIC_MINISTRY", ministries });
       });
   };
 };

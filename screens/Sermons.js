@@ -1,13 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { ScrollView } from "react-native";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 import AudioCard from "../components/AudioCard";
 import Layout from "../constants/Layout";
 import { ThemeColors } from "../constants/Colors";
+import { fetchSermons } from "../redux/actions/sermonsActions";
 
 export default function Sermons({ route }) {
   const store = useSelector((state) => state);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchSermons());
+  }, []);
 
   return (
     <ScrollView
